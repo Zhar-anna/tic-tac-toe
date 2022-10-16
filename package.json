@@ -1,0 +1,8 @@
+{
+  "type": "module",
+  "dependencies": {
+    "core-js": "*",
+    "lodash": "^4.17.21",
+    "regenerator-runtime": "*"
+  }
+}
