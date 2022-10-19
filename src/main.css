@@ -1,0 +1,25 @@
+.container {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+}
+
+div {
+    /* width: 150%; */
+    height: 150%;
+}
+
+.table-bordered {
+    text-align: center;
+    width: 50%;
+    font-size: 40px;
+}
+
+.table-bordered td {
+    border: 3px solid;
+}
+
+.pt-2, .py-2 {
+    padding-top: 1.5rem!important;
+    padding-bottom: 1.5rem!important;
+}

@@ -1,8 +1,14 @@
 {
   "type": "module",
   "dependencies": {
+    "bootstrap": "^5.2.2",
     "core-js": "*",
     "lodash": "^4.17.21",
     "regenerator-runtime": "*"
+  },
+  "devDependencies": {
+    "eslint": "^8.25.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0"
   }
 }
