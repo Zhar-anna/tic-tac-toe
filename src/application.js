@@ -25,23 +25,35 @@ const generateField = () => {
       [2, 4, 6]
     ];
   const boxes = document.getElementsByTagName('td');
+
     for (const varWin of arrWin) {
-      for (const box of varWin) {
-        if (boxes[arrWin[box]].innerHTML == 'x') {
+        if (boxes[varWin[0]].textContent === 'x' && boxes[varWin[1]].textContent === 'x' && boxes[varWin[2]].textContent === 'x') {
         result ='крестики';
         prepearingResult(result);
-        } else if (boxes[arrWin[box]].innerHTML == 'o') {
+        boxes[varWin[0]].style.color = 'green';
+        boxes[varWin[1]].style.color = 'green';
+        boxes[varWin[2]].style.color = 'green';
+        } else if (boxes[varWin[0]].textContent === 'o' && boxes[varWin[1]].textContent === 'o' && boxes[varWin[2]].textContent === 'o') {
         result ='нолики';
         prepearingResult(result);
+        boxes[varWin[0]].style.color = 'green';
+        boxes[varWin[1]].style.color = 'green';
+        boxes[varWin[2]].style.color = 'green';
         }
-      }
     }
+    
+    
     return result;
   };
   
   const prepearingResult = (winner) => {
     const winnerBox = document.querySelector('.winner');
-    winnerBox.textContent = `Победили${winner}`;
+    winnerBox.textContent = `Победили ${winner}!`;
+    const win_block = document.getElementById('win_block');
+    win_block.style.display = "block";
+    document.querySelector('.again').onclick = function() {
+      location.reload(true);
+  }
   }
 
 export default () => {
@@ -56,9 +68,10 @@ export default () => {
       e.target.textContent = currentSymbol;
     }
     switchPlayer();
+    check();
   });
   
   const root = document.querySelector('.root');
   root.append(tableEl);
-  check();
+  
 };
